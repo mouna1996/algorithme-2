@@ -1,0 +1,23 @@
+ALGORITHM algorithm_1
+VAR
+    hash : HASH_TABLE<STRING,INTEGER>
+    str : STRING[]
+    tab : ARRAY_OF String[];
+BEGIN
+   FOR i FROM 0 TO i <  str.length  DO
+       IF (hash.lookup(str[i])) THEN
+           hash.insert(str[i] , hash.get(str[i]) + 1)
+           
+           ELSE
+               hash.insert(str[i] , 1)
+       END_IF
+   END_FOR
+   tab = hash.getKeys()
+   
+    FOR j FROM 0 TO j < tab.length    DO
+        IF(hash.get(tab[j]) = 1) THEN
+        write(hash.get(tab[j]))
+        END_IF
+        BREAK;
+    END_FOR
+END

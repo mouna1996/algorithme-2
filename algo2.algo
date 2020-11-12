@@ -1,0 +1,16 @@
+  ALGORITHM algorithm_2
+  
+VAR
+    tab : ARRAY_OF Interger
+    min : INTEGER
+BEGIN
+    min = tab[0] + tab[1]
+    FOR i FROM 0 TO i < tab.length -1  DO
+        FOR j FROM i+1 TO j < tab.length  DO
+            IF (tab[i] + tab[j] < min) THEN
+                min := tab[i] + tab[j]
+            END_IF
+        END_FOR
+    END_FOR
+    write(min)
+END
